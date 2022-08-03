@@ -1,4 +1,4 @@
-package br.com.futurodev.m2s1;
+package br.com.futurodev.m2s1.aula1;
 
 import java.util.Calendar;
 import java.util.Scanner;
