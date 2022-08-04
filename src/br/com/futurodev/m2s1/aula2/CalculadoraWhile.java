@@ -20,6 +20,10 @@ public class CalculadoraWhile {
             System.out.print("Informe a operação matemática (+ - * /) ou digite \"sair\": ");
             operacao = entrada.next();
 
+            if (operacao.equalsIgnoreCase("sair")) {
+                return;
+            }
+
             System.out.print("Informe o primeiro número: ");
             numero1 = entrada.nextDouble();
             System.out.print("Informe o segundo número: ");
@@ -38,8 +42,6 @@ public class CalculadoraWhile {
                 case "/":
                     System.out.println("Divisao: " + divisao(numero1, numero2));
                     break;
-                case "sair":
-                    return;
                 default:
                     System.out.println("Operação desconhecida!");
             }
