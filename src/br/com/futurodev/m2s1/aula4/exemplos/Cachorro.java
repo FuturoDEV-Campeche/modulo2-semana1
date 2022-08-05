@@ -31,19 +31,30 @@ public class Cachorro {
 
     // Ações
     public void latir() {
-        System.out.println("Au au!");
+        System.out.println(this.nome + ": Au au!");
     }
 
     public void comer(String comida) {
-        System.out.println("Comendo " + comida);
+        System.out.println(this.nome + ": Comendo " + comida);
     }
 
     public void brincar(String brinquedo) {
-        System.out.println("Brincando com " + brinquedo);
+        System.out.println(this.nome + ": Brincando com " + brinquedo);
     }
 
     public void dormir() {
-        System.out.println("zZZZzzzzzZZZZzzzzZZ....");
+        System.out.println(this.nome + ": zZZZzzzzzZZZZzzzzZZ....");
     }
 
+    public void mudarNome(String novoNome) {
+        this.nome = novoNome;
+    }
+
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "nome='" + nome + '\'' +
+                ", raca='" + raca + '\'' +
+                '}';
+    }
 }

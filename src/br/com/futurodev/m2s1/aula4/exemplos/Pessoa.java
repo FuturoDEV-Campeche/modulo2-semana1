@@ -18,6 +18,7 @@ public class Pessoa {
     private double altura; //*
     private double peso; //*
     private String endereco;
+    private Cachorro cachorro;
 
     public Pessoa(
             String nome, String cpf,
@@ -30,6 +31,10 @@ public class Pessoa {
         this.corPele = corPele;
         this.altura  = altura;
         this.peso    = peso;
+    }
+
+    public void adotar(Cachorro cao) {
+        cachorro = cao;
     }
 
     @Override
@@ -47,6 +52,7 @@ public class Pessoa {
                 ", altura=" + altura +
                 ", peso=" + peso +
                 ", endereco='" + endereco + '\'' +
+                ", cachorro=" + cachorro +
                 '}';
     }
 

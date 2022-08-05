@@ -15,7 +15,22 @@ public class MainCachorro {
                 new Date(), "Fêmea"
         );
 
+        Cachorro scooby = new Cachorro(
+                "Scooby", "Dachund",
+                "Preto", "Curto",
+                "Pequeno", 7,
+                new Date(), "Macho"
+        );
 
+        amora.brincar("bolinha");
+        scooby.dormir();
+        amora.comer("osso");
+        scooby.latir();
+        amora.latir();
+        scooby.brincar("corda");
+        amora.brincar("corda");
+        amora.dormir();
+        scooby.dormir();
 
     }
 
