@@ -2,10 +2,11 @@ package br.com.futurodev.m2s1.aula4;
 
 import br.com.futurodev.m2s1.aula4.exemplos.Pessoa;
 
-public class Main {
+public class MainPessoa {
 
     public static void main(String[] args) {
 
+        // Instanciando classe pessoa
         Pessoa gabriel = new Pessoa(
                 "Gabriel Augustin", "111.222.333-44",
                 "Masculino", "Branca",
