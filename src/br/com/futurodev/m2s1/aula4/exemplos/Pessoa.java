@@ -20,6 +20,7 @@ public class Pessoa {
     private String endereco;
     private Cachorro cachorro;
 
+    // Método construtor
     public Pessoa(
             String nome, String cpf,
             String genero, String corPele,
@@ -37,6 +38,12 @@ public class Pessoa {
         cachorro = cao;
     }
 
+    public void alterarNomeCachorro(Cachorro cachorro, String novoNome) {
+        // Aqui está sendo manipulado o parâmetro cachorro ao invés do cachorro da própria pessoa (não está utilizando "this")
+        cachorro.mudarNome(novoNome);
+    }
+
+    // Método que converte o objeto em String
     @Override
     public String toString() {
         return "Pessoa{" +

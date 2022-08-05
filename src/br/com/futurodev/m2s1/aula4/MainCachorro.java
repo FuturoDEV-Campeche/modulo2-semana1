@@ -8,6 +8,7 @@ public class MainCachorro {
 
     public static void main(String[] args) {
 
+        // Cria um objeto cachorro
         Cachorro amora = new Cachorro(
                 "Amora", "Beagle",
                 "Tricolor", "Curto",
@@ -15,6 +16,7 @@ public class MainCachorro {
                 new Date(), "Fêmea"
         );
 
+        // Cria um objeto cachorro
         Cachorro scooby = new Cachorro(
                 "Scooby", "Dachund",
                 "Preto", "Curto",
@@ -22,6 +24,7 @@ public class MainCachorro {
                 new Date(), "Macho"
         );
 
+        // Executa as ações de cachorro
         amora.brincar("bolinha");
         scooby.dormir();
         amora.comer("osso");

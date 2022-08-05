@@ -14,6 +14,7 @@ public class Cachorro {
     private Date dataNascimento;
     private String sexo;
 
+    // Método construtor
     public Cachorro(
             String nome, String raca, String corPelo,
             String tamanhoPelo, String porte, double peso,
@@ -50,6 +51,7 @@ public class Cachorro {
         this.nome = novoNome;
     }
 
+    // Método que converte o objeto em String
     @Override
     public String toString() {
         return "Cachorro{" +
