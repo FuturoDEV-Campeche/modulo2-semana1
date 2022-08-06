@@ -45,16 +45,18 @@ public class Exercicio {
             System.out.println("");
             System.out.println("0 - Sair");
 
-            int opcao = entrada.nextInt();
-            if (opcao == 0) {
+            String opcao = entrada.nextLine();
+            if (opcao.equals("0")) {
                 break;
             }
             switch (opcao) {
-                case 1:
+                case "1":
                     listarItens(filmesSeries);
                     break;
-                case 2:
-                    adcionarItem(filmesSeries);
+                case "2":
+                    System.out.println("Digite o nome: ");
+                    String item = entrada.nextLine();
+                    adcionarItem(item, filmesSeries);
                     break;
                 default:
                     System.out.println("Opção inválida!");
@@ -64,8 +66,7 @@ public class Exercicio {
 
     }
 
-    public static void adcionarItem(List<String> itens) {
-        String item = new Scanner(System.in).nextLine();
+    public static void adcionarItem(String item, List<String> itens) {
         itens.add(item);
         System.out.println("Item adcionado: ");
     }
