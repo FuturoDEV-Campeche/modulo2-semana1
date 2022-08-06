@@ -78,11 +78,7 @@ public class Exercicio {
                     adcionarItem(item, filmesSeries);
                     break;
                 case "3":
-                    int indice = listarPedirIndice(filmesSeries, entrada);
-                    if (indice < 0) {
-                        System.out.println("Opção inválida! Operação cancelada!");
-                    }
-                    System.out.println(filmesSeries.get(indice));
+                    removerItemLista(filmesSeries, entrada);
                     break;
                 default:
                     System.out.println("Opção inválida!");
@@ -113,11 +109,26 @@ public class Exercicio {
         System.out.print("Escolha um item: ");
         String opcaoEscolhida = entrada.nextLine();
         try {
-            return Integer.parseInt(opcaoEscolhida);
+            return Integer.parseInt(opcaoEscolhida) - 1;
         } catch (Exception e) {
-            System.out.println("Opção inválida!");
-            return listarPedirIndice(listaItens, entrada);
+            return -1;
+//            System.out.println("Opção inválida!");
+//            return listarPedirIndice(listaItens, entrada);
         }
+    }
+
+    public static void removerItemLista(List<String> listaItens, Scanner entrada) {
+        int indice = listarPedirIndice(listaItens, entrada);
+        if (indice < 0) {
+            System.out.println("Opção inválida! Operação cancelada!");
+        } else {
+            removerItem(indice, listaItens);
+        }
+    }
+
+    public static void removerItem(int indice, List<String> listaItens) {
+        listaItens.remove(indice);
+        System.out.println("Item removido!");
     }
 
 }
