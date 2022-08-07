@@ -89,23 +89,23 @@ public class Exercicio {
     }
 
     // # Exercício 1
-    public static void adcionarItem(String item, List<String> itens) {
-        itens.add(item);
+    public static void adcionarItem(String item, List<String> filmesSeries) {
+        filmesSeries.add(item);
         System.out.println("Item adcionado: ");
     }
 
     // # Exercício 1
-    public static void listarItens(List<String> listaItens) {
+    public static void listarItens(List<String> filmesSeries) {
         System.out.println("Filmes/Séries: ");
         // # Exercício 2
-        for (int i = 0; i < listaItens.size(); i++) {
-            System.out.println((i + 1) + " - " + listaItens.get(i));
+        for (int i = 0; i < filmesSeries.size(); i++) {
+            System.out.println((i + 1) + " - " + filmesSeries.get(i));
         }
     }
 
     // # Exercício 3
-    public static int listarPedirIndice(List<String> listaItens, Scanner entrada) {
-        listarItens(listaItens);
+    public static int listarPedirIndice(List<String> filmesSeries, Scanner entrada) {
+        listarItens(filmesSeries);
         System.out.print("Escolha um item: ");
         String opcaoEscolhida = entrada.nextLine();
         try {
@@ -113,21 +113,23 @@ public class Exercicio {
         } catch (Exception e) {
             return -1;
 //            System.out.println("Opção inválida!");
-//            return listarPedirIndice(listaItens, entrada);
+//            return listarPedirIndice(filmesSeries, entrada);
         }
     }
 
-    public static void removerItemLista(List<String> listaItens, Scanner entrada) {
-        int indice = listarPedirIndice(listaItens, entrada);
+    // # Exercício 3
+    public static void removerItemLista(List<String> filmesSeries, Scanner entrada) {
+        int indice = listarPedirIndice(filmesSeries, entrada);
         if (indice < 0) {
             System.out.println("Opção inválida! Operação cancelada!");
         } else {
-            removerItem(indice, listaItens);
+            removerItem(indice, filmesSeries);
         }
     }
 
-    public static void removerItem(int indice, List<String> listaItens) {
-        listaItens.remove(indice);
+    // # Exercício 3
+    public static void removerItem(int indice, List<String> filmesSeries) {
+        filmesSeries.remove(indice);
         System.out.println("Item removido!");
     }
 
