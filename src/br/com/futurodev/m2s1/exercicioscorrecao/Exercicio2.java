@@ -20,8 +20,8 @@ public class Exercicio2 {
      */
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
-        List<String> filmesSeriesLista = new ArrayList<>();
+        Scanner entrada = new Scanner(System.in); // Cria nosso objeto de entrada de dados
+        List<String> filmesSeriesLista = new ArrayList<>(); // Lista para armazenar filmes/séries
 
         System.out.println("#################");
         System.out.println("# Filmes/Séries #");
@@ -33,20 +33,20 @@ public class Exercicio2 {
             System.out.println("| 0 - Sair                   |");
             System.out.println("+----------------------------+");
             System.out.print("Escolha uma opção: ");
+            String opcao = entrada.nextLine(); // Aguarda o usuário informar a opção
 
-            String opcao = entrada.nextLine();
-            if (opcao.equals("0")) {
-                break;
+            if (opcao.equals("0")) { // Se a opção for "0" deve sair do sistema
+                break; // Encerra o laço de repetição
             }
 
             switch (opcao) {
                 case "1":
-                    listar(filmesSeriesLista);
+                    listar(filmesSeriesLista); // Utiliza a função para exibir os itens informados na lista
                     break;
                 case "2":
                     System.out.print("Informe um filme/série: ");
                     String filmeSerie = entrada.nextLine();
-                    adicionar(filmesSeriesLista, filmeSerie);
+                    adicionar(filmesSeriesLista, filmeSerie); // Utiliza a função para adicionar um novo item na lista
                     break;
                 default:
                     System.out.println("Opção inválida!");
@@ -57,14 +57,14 @@ public class Exercicio2 {
     }
 
     public static void adicionar(List<String> filmesSeriesLista, String filmeSerie) {
-        filmesSeriesLista.add(filmeSerie);
+        filmesSeriesLista.add(filmeSerie); // Adiciona filme/série na lista
         System.out.println("Filme/Série adicionado!");
     }
 
     public static void listar(List<String> filmesSeriesLista) {
         System.out.println("Filmes/Séries:");
-        for (int i = 0; i < filmesSeriesLista.size(); i++) {
-            System.out.println("[" + i + "] " + filmesSeriesLista.get(i));
+        for (int i = 0; i < filmesSeriesLista.size(); i++) { // Laço de repetição para exibir cada item da lista
+            System.out.println("[" + i + "] " + filmesSeriesLista.get(i)); // Exibe o indice e o nome do filme
         }
     }
 

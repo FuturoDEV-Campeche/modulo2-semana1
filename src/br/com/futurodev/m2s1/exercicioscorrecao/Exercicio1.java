@@ -18,33 +18,33 @@ public class Exercicio1 {
      */
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
-        List<String> filmesSeriesLista = new ArrayList<>();
+        Scanner entrada = new Scanner(System.in); // Cria nosso objeto de entrada de dados
+        List<String> filmesSeriesLista = new ArrayList<>(); // Lista para armazenar filmes/séries
 
         do {
             System.out.print("Informe um filme/série ou digite \"0\" para sair: ");
-            String itemInserido = entrada.nextLine();
+            String itemInserido = entrada.nextLine(); // Aguarda o usuário entrar com o filme/série
 
-            if (itemInserido.equals("0")) {
-                listar(filmesSeriesLista);
-                break;
+            if (itemInserido.equals("0")) { // Se a opção for "0" deve exibir toda a lista e na sequencia sair do sistema
+                listar(filmesSeriesLista); // Utiliza a função para exibir os itens informados na lista
+                break; // Encerra o laço de repetição
             }
 
-            adicionar(filmesSeriesLista, itemInserido);
+            adicionar(filmesSeriesLista, itemInserido); // Utiliza a função para adicionar um novo item na lista
 
         } while (true);
 
     }
 
     public static void adicionar(List<String> filmesSeriesLista, String filmeSerie) {
-        filmesSeriesLista.add(filmeSerie);
+        filmesSeriesLista.add(filmeSerie); // Adiciona filme/série na lista
         System.out.println("Filme/Série adicionado!\n");
     }
 
     public static void listar(List<String> filmesSeriesLista) {
         System.out.println("Filmes/Séries:");
-        for (String filmeSerie : filmesSeriesLista) {
-            System.out.println(filmeSerie);
+        for (String filmeSerie : filmesSeriesLista) { // Laço de repetição para percorrer cada item da lista
+            System.out.println(filmeSerie); // Exibe o nome do filme
         }
     }
 
